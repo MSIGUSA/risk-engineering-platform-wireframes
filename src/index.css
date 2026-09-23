@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  /* brand palette */
+  --brand-navy: #10254d;
+  --brand-navy-strong: #0b1d3d;
+  --brand-red: #c62845;
+  --brand-red-soft: #fdf1f4;
+  --brand-blue-soft: #edf2fb;
+
+  /* neutral palette */
+  --neutral-0: #ffffff;
+  --neutral-25: #f8f9fc;
+  --neutral-50: #f2f5fa;
+  --neutral-100: #e1e7f0;
+  --neutral-300: #acb8ca;
+  --neutral-500: #5f6f86;
+  --neutral-700: #233248;
+  --neutral-900: #0f172a;
+
+  /* semantic colors */
+  --clr-text: var(--neutral-700);
+  --clr-text-strong: var(--neutral-900);
+  --clr-bg: var(--neutral-0);
+  --clr-bg-alt: var(--neutral-25);
+  --clr-border: var(--neutral-100);
+  --clr-border-strong: #cad5e3;
+  --clr-surface: var(--neutral-50);
+  --clr-surface-elevated: var(--neutral-0);
+  --clr-accent: var(--brand-navy);
+  --clr-accent-strong: var(--brand-navy-strong);
+  --clr-accent-bg: var(--brand-blue-soft);
+  --clr-accent-border: #98aed0;
+  --clr-on-accent: #ffffff;
+  --clr-focus-ring: rgba(15, 47, 109, 0.25);
+
+  /* status colors */
+  --clr-not-started: #70859b;
+  --clr-in-progress: #1560a8;
+  --clr-blocked: var(--brand-red);
+  --clr-complete: #1c7a4c;
+
+  --status-not-started-bg: #eef2f6;
+  --status-not-started-fg: #52657a;
+  --status-in-progress-bg: #e9f3ff;
+  --status-in-progress-fg: #0d5a9f;
+  --status-blocked-bg: var(--brand-red-soft);
+  --status-blocked-fg: #ad1731;
+  --status-complete-bg: #e9f8ef;
+  --status-complete-fg: #17663f;
+  --status-new-bg: #fff6df;
+  --status-new-fg: #8a5b05;
+  --status-open-bg: #edf3ff;
+  --status-open-fg: #254d8d;
+  --status-review-bg: #f1ecff;
+  --status-review-fg: #4f3f91;
+
+  --validation-bg: var(--brand-red-soft);
+  --validation-border: #f3a9b8;
+  --validation-fg: #ad1731;
+
+  /* layout */
+  --nav-height: 62px;
+  --sidebar-width: 276px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 32px;
+
+  /* shape and depth */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --shadow-sm: 0 1px 2px rgba(17, 37, 74, 0.08);
+  --shadow-md: 0 6px 18px rgba(17, 37, 74, 0.08);
+  --shadow-lg: 0 18px 48px rgba(14, 25, 48, 0.2);
+
+  /* type */
+  --sans: 'Inter', 'Segoe UI', Tahoma, sans-serif;
+  --display: 'Inter', 'Segoe UI', Tahoma, sans-serif;
+  --mono: 'Cascadia Code', Consolas, monospace;
+
+  /* motion */
+  --motion-fast: 150ms;
+  --motion-base: 220ms;
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+
+  font: 15px/1.45 var(--sans);
+  color: var(--clr-text);
+  background: var(--clr-bg);
+  color-scheme: light;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  overflow: hidden;
+  background: var(--clr-bg-alt);
+}
+
+#root {
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+h1, h2, h3 { font-weight: 600; color: var(--clr-text-strong); margin: 0 0 4px; }
+h1, h2 { font-family: var(--display); letter-spacing: 0.2px; }
+h1 { font-size: 30px; line-height: 1.05; }
+h2 { font-size: 24px; line-height: 1.1; }
+h3 { font-size: 16px; }
+
+p { margin: 0; }
+button { cursor: pointer; font-family: inherit; }
+table { border-collapse: collapse; width: 100%; }
+a { color: var(--clr-accent); }
+
+/* — dead code below removed (Vite starter) — */
+@media (max-width: 768px) {
+  :root {
+    --sidebar-width: 228px;
+    --nav-height: 58px;
+  }
+}
