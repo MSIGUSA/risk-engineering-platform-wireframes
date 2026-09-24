@@ -229,15 +229,16 @@
 }
 
 .wb-sidebar__tabs {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   flex-shrink: 0;
   border-bottom: 1px solid var(--clr-border);
 }
 
 .wb-sidebar__tab {
-  flex: 1;
   min-width: 0;
-  padding: 10px 8px;
+  min-height: 48px;
+  padding: 8px 5px;
   background: none;
   border: none;
   border-bottom: 2px solid transparent;
@@ -246,7 +247,8 @@
   color: var(--clr-text);
   text-transform: uppercase;
   letter-spacing: 0.4px;
-  white-space: nowrap;
+  line-height: 1.15;
+  overflow-wrap: anywhere;
   transition: border-color var(--motion-fast) var(--ease-standard), color var(--motion-fast) var(--ease-standard), background var(--motion-fast) var(--ease-standard);
 
   &.active {
